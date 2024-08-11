@@ -10,12 +10,14 @@
     <DockerServiceName>monitoring.api</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="alertmanager\alertmanager.yml" />
     <None Include="docker-compose.override.yml">
       <DependentUpon>docker-compose.yml</DependentUpon>
     </None>
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
     <None Include="grafana\provisioning\datasources\datasources.yml" />
+    <None Include="Prometheus\alert.rules.yml" />
     <None Include="Prometheus\Prometheus.yml" />
   </ItemGroup>
 </Project>
